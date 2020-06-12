@@ -28,10 +28,14 @@ paths:
       responses:
         200:
           description: "atcoder user info"
-  /compro/atcoder/users/{atcoder_id}/history:
+  /compro/atcoder/users/{atcoder_id}/bingo/{contest_type}:
     get:
       parameters:
       - name: "atcoder_id"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "contest_type"
         in: "path"
         required: true
         type: "string"
@@ -39,4 +43,4 @@ paths:
       - "application/json"
       responses:
         200:
-          description: "atcoder user info"
+          description: "atcoder user bingo info"
